@@ -5,5 +5,5 @@ RUN wget -O /usr/bin/kustomize "https://github.com/kubernetes-sigs/kustomize/rel
 RUN chmod +x /usr/bin/kustomize
 RUN mkdir -p /src
 COPY . /src
-RUN pip install -r requirements.txt
+RUN pip install -r /src/requirements.txt
 ENTRYPOINT ["run_tests.py"]
